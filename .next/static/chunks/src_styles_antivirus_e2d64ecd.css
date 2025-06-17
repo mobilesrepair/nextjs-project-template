@@ -1,0 +1,76 @@
+/* [project]/src/styles/antivirus.css [app-client] (css) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: .3s ease-out forwards fadeIn;
+}
+
+.animate-scan {
+  animation: 1.5s ease-in-out infinite scan;
+}
+
+@keyframes scan {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.card-hover {
+  transition: all .2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+}
+
+.scan-type-card {
+  border: 2px solid #0000;
+  transition: all .2s ease-in-out;
+}
+
+.scan-type-card.selected {
+  background-color: #2563eb0d;
+  border-color: #2563eb;
+}
+
+.protection-status {
+  position: relative;
+  overflow: hidden;
+}
+
+.protection-status:after {
+  content: "";
+  opacity: 0;
+  background: linear-gradient(#22c55e1a, #22c55e00);
+  transition: opacity .3s;
+  position: absolute;
+  inset: 0;
+}
+
+.protection-status:hover:after {
+  opacity: 1;
+}
+
+
+/*# sourceMappingURL=src_styles_antivirus_e2d64ecd.css.map*/
